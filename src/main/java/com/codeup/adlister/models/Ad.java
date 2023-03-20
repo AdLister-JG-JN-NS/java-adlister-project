@@ -75,4 +75,36 @@ public class Ad {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getJob_type() {
+        return job_type;
+    }
+
+    public void setJob_type(String job_type) {
+        this.job_type = job_type;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 }
