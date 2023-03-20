@@ -21,10 +21,10 @@
         <section>${ad.description}</section>
         <c:if test="${sessionScope.user.id == ad.getUserId()}">
             <form method="post" action="/delete">
-                <button type="submit" name="delete" value="${ad.id}">delete listing...</button>
+                <input type="hidden" id="delete" name="delete" value="${ad.id}">
+                <input type="submit" class="btn btn-block btn-primary" value="delete listing...">
             </form>
         </c:if>
     </div>
-
 </body>
 </html>
