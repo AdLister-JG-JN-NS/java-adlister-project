@@ -1,5 +1,7 @@
 USE adlister_project_db;
 
+TRUNCATE  users;
+
 INSERT INTO users (id, username, email, password)
 
 VALUES (1, 'user1', 'user1@gmail.com', 'password1'),
