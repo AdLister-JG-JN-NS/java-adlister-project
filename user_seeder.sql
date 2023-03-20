@@ -1,6 +1,5 @@
 USE adlister_project_db;
 
-
 INSERT INTO users (username, email, password)
 
 VALUES ('gitGud', 'Sickwithit@gmail.com', 'GetRektKid!$'),
