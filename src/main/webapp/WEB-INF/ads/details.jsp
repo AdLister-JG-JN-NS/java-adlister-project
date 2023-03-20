@@ -14,20 +14,33 @@
     </jsp:include>
 
 </head>
-<body>
+<body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div>
-      <h1>${ad.title}</h1><span>$${ad.salary / 1000}K</span>
+<div class="zen-card-container">
+    <div class="zen-card p-3">
+      <section class="d-flex justify-content-between">
+          <span class="fs-1">${ad.title}</span>
+          <span class="fs-1 fst-italic fw-lighter text-success">$${String.format("%.0f", ad.salary / 1000)}K</span>
+      </section>
       <hr>
-      <span>☞ ${ad.job_type} ◌ ${ad.company} ◌ ${ad.location}</span>
-        <h3>Description:</h3>
-        <section>${ad.description}</section>
+      <span class="text-muted">☞  ${ad.job_type}  ◌  ${ad.company}  ◌  ${ad.location}</span>
+        <div class="d-flex flex-column">
+        <span class="fs-3 fw-light my-1">Description:</span>
+        <section class="mb-3">${ad.description}</section>
         <c:if test="${sessionScope.user.id == ad.getUserId()}">
+            <div class="d-flex justify-content-end">
+            <form method="post" action="/edit" >
+                <input type="hidden" id="edit" name="edit" value="${ad.id}">
+                <input type="submit" class="btn btn-outline-warning" value="edit">
+            </form>
             <form method="post" action="/delete">
                 <input type="hidden" id="delete" name="delete" value="${ad.id}">
-                <input type="submit" class="btn btn-block btn-primary" value="delete listing...">
+                <input type="submit" class="btn btn-outline-danger" value="delete listing...">
             </form>
+            </div>
         </c:if>
+        </div>
     </div>
+</div>
 </body>
 </html>
