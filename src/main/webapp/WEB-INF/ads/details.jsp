@@ -5,7 +5,7 @@
   Time: 11:25 AM
   To change this template use File | Settings | File Templates.
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -19,7 +19,11 @@
       <span>☞ ${ad.job_type} ◌ ${ad.company} ◌ ${ad.location}</span>
         <h3>Description:</h3>
         <section>${ad.description}</section>
-
+        <c:if test="${sessionScope.user.id == ad.getUserId()}">
+            <form method="post" action="/delete">
+                <button type="submit" name="delete" value="${ad.id}">delete listing...</button>
+            </form>
+        </c:if>
     </div>
 
 </body>

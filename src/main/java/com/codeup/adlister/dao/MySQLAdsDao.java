@@ -56,6 +56,36 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public void delete(Ad ad) {
+        try {
+            String insertQuery = "DELETE FROM ads WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setLong(1, ad.getId());
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting ad.", e);
+        }
+    }
+
+    @Override
+    public void edit(Ad ad) {
+
+    }
+
+    @Override
+    public Ad findById(long id) {
+        List<Ad> ads = DaoFactory.getAdsDao().all();
+        for (Ad ad : ads){
+            if(ad.getId() == id){
+                return ad;
+            }
+        }
+        return null;
+    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
