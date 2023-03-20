@@ -16,6 +16,10 @@ CREATE TABLE ads (
     user_id INT UNSIGNED NOT NULL,
     title VARCHAR(240) NOT NULL,
     description TEXT NOT NULL,
+    company VARCHAR(50),
+    salary double,
+    job_type varchar(50),
+    location varchar(100),
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE

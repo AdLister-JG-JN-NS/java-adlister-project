@@ -5,12 +5,37 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
+    private String company;
+    private String job_type;
+    private String location;
+    private double salary;
 
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
+    }
+
+    public Ad(long id, long userId, String title, String description, String company, String job_type, String location, double salary) {
+        this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.company = company;
+        this.job_type = job_type;
+        this.location = location;
+        this.salary = salary;
+    }
+
+    public Ad(long userId, String title, String description, String company, String job_type, String location, double salary) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.company = company;
+        this.job_type = job_type;
+        this.location = location;
+        this.salary = salary;
     }
 
     public Ad(long userId, String title, String description) {
