@@ -9,10 +9,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>${ad.title}</title>
+    <jsp:include page="/WEB-INF/partials/head.jsp">
+        <jsp:param name="title" value="${ad.title}" />
+    </jsp:include>
+
 </head>
 <body>
-
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div>
       <h1>${ad.title}</h1><span>$${ad.salary / 1000}K</span>
       <hr>
