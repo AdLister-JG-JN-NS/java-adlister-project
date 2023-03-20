@@ -95,8 +95,6 @@ public class MySQLAdsDao implements Ads {
         }catch (SQLException e){
             throw new RuntimeException("Error updating ad.", e);
         }
-
-        return null;
     }
 
     @Override
