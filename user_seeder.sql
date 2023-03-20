@@ -4,8 +4,8 @@ TRUNCATE  users;
 
 INSERT INTO users (id, username, email, password)
 
-VALUES (1, 'user1', 'user1@gmail.com', 'password1'),
-       (2, 'user2', 'user2@gmail.com', 'password2'),
-       (3, 'user3', 'user3@gmail.com', 'password3'),
-       (4, 'user4', 'user4@gmail.com', 'password4'),
-       (5, 'user5', 'user5@gmail.com', 'password5');
+VALUES (1, 'gitGud', 'Sickwithit@gmail.com', 'GetRektKid!$'),
+       (2, 'TonyMontana69', 'Mylittlefriend@gmail.com', 'KingPin440!'),
+       (3, 'punk3463', 'rockstar764@gmail.com', 'Bassguitar123'),
+       (4, 'CodingGod420', 'Onanotherlvl@gmail.com', 'T3chN0l0gy'),
+       (5, 'DarkCloud502', 'Darkstarcascading@gmail.com', 'EventHorizon9000');
