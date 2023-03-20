@@ -1,7 +1,8 @@
-USE adlister_project_db;
+DROP DATABASE IF EXISTS adlister_project_db;
 
-DROP TABLE IF EXISTS ads;
-DROP TABLE IF EXISTS users;
+CREATE DATABASE adlister_project_db;
+
+USE adlister_project_db;
 
 CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
