@@ -71,8 +71,32 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public void edit(Ad ad) {
+    public Long edit(Ad ad) {
+        try{
+            String updateQuery = "update ads set " +
+                    "title = ?, " +
+                    "description = ?, " +
+                    "company = ?, " +
+                    "salary = ?, " +
+                    "job_type = ?, " +
+                    "location = ? " +
+                    "where id = ?";
+            PreparedStatement stmt = connection.prepareStatement(updateQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, ad.getTitle());
+            stmt.setString(2, ad.getDescription());
+            stmt.setString(3, ad.getCompany());
+            stmt.setDouble(4, ad.getSalary());
+            stmt.setString(5, ad.getJob_type());
+            stmt.setString(6, ad.getLocation());
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+            return rs.getLong("id");
+        }catch (SQLException e){
+            throw new RuntimeException("Error updating ad.", e);
+        }
 
+        return null;
     }
 
     @Override
