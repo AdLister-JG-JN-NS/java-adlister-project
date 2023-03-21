@@ -63,15 +63,13 @@ public class MySQLAdsDao implements Ads {
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getId());
             stmt.executeUpdate();
-            ResultSet rs = stmt.getGeneratedKeys();
-            rs.next();
         } catch (SQLException e) {
             throw new RuntimeException("Error deleting ad.", e);
         }
     }
 
     @Override
-    public Long edit(Ad ad) {
+    public void edit(Ad ad) {
         try{
             String updateQuery = "update ads set " +
                     "title = ?, " +
@@ -88,10 +86,8 @@ public class MySQLAdsDao implements Ads {
             stmt.setDouble(4, ad.getSalary());
             stmt.setString(5, ad.getJob_type());
             stmt.setString(6, ad.getLocation());
+            stmt.setLong(7, ad.getId());
             stmt.executeUpdate();
-            ResultSet rs = stmt.getGeneratedKeys();
-            rs.next();
-            return rs.getLong("id");
         }catch (SQLException e){
             throw new RuntimeException("Error updating ad.", e);
         }
