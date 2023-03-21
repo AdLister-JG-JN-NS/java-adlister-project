@@ -25,7 +25,7 @@
                         <c:forEach items="${ads}" var="ad">
                             <c:if test="${sessionScope.user.id == ad.getUserId()}">
                                 <li class="list-group-item">
-                                    <a href="/ads/details?adid=${ad.id}">${ad.title}</a>
+                                    <a href="/ads/details?adId=${ad.id}">${ad.title}</a>
                                     <p>Job Description: ${ad.description}</p>
                                     <p>Job Location: ${ad.location}</p>
                                     <p>Company: ${ad.company}</p>
@@ -34,10 +34,8 @@
                                 </li>
                             </c:if>
                         </c:forEach>
-
                     </ul>
                 </div>
-                <a href="/edit" class="btn btn-primary text-center">Update/Edit Job Listing</a>
             </div>
         </div>
     </div>
