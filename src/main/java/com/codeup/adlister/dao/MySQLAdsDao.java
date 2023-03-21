@@ -97,7 +97,6 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    @Override
     public Ad findById(long id) {
         List<Ad> ads = DaoFactory.getAdsDao().all();
         for (Ad ad : ads){
