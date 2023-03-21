@@ -1,9 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-expand-lg bg-body-dark">
 
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+
         <div class="navbar-header">
 
             <a class="navbar-brand" href="/ads">Job Postings</a>
@@ -14,7 +14,7 @@
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link red-hover w-text" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+                                <a class="nav-link " href="/"><i class=""></i> Home</a>
                             </li>
                         </ul>
                         <span class="navbar-text">
@@ -25,7 +25,8 @@
                             <a class="nav-link red-hover w-text" href="${pageContext.request.contextPath}/profile">View Profile</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link red-hover w-text" href="${pageContext.request.contextPath}/logout">Logout</a>
+                            <a class="nav-link red-hover w-text"
+                               href="${pageContext.request.contextPath}/logout">Logout</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link red-hover w-text" href="${pageContext.request.contextPath}/ads/create">Create Job Listings</a>
@@ -33,7 +34,8 @@
                     </c:when>
                     <c:otherwise>
                         <li class="nav-item active">
-                            <a class="nav-link red-hover w-text" href="${pageContext.request.contextPath}/login">Login</a>
+                            <a class="nav-link red-hover w-text"
+                               href="${pageContext.request.contextPath}/login">Login</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link red-hover w-text" href="${pageContext.request.contextPath}/register">Register Account</a>
@@ -42,8 +44,10 @@
                 </c:choose>
 
             </ul>
-        </div>
-    </div><!-- /.navbar-collapse -->
+        </span>
+                    </div>
+                </div>
+        </div> <!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 
 </nav>
