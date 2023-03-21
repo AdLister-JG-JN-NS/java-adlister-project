@@ -34,7 +34,6 @@ public class EditAdServlet extends HttpServlet {
         Ad ad = new Ad(id, userId, title, description, company, jobType, location, salary);
         DaoFactory.getAdsDao().edit(ad);
 
-        req.setAttribute("ad", ad);
-        req.getRequestDispatcher("/WEB-INF/ads/details.jsp").forward(req, resp);
+        resp.sendRedirect("/ads/details?adId=" + ad.getId());
     }
 }
