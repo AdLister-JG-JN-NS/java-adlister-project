@@ -28,7 +28,7 @@
         <section class="mb-3">${ad.description}</section>
         <c:if test="${sessionScope.user.id == ad.getUserId()}">
             <div class="d-flex justify-content-end">
-            <form method="post" action="/edit" >
+            <form action="/edit" >
                 <input type="hidden" id="edit" name="edit" value="${ad.id}">
                 <input type="submit" class="btn btn-outline-warning" value="edit">
             </form>
