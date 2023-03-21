@@ -12,7 +12,6 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="${ad.title}" />
     </jsp:include>
-
 </head>
 <body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
@@ -29,7 +28,7 @@
         <section class="mb-3">${ad.description}</section>
         <c:if test="${sessionScope.user.id == ad.getUserId()}">
             <div class="d-flex justify-content-end">
-            <form method="post" action="/edit" >
+            <form action="/edit" >
                 <input type="hidden" id="edit" name="edit" value="${ad.id}">
                 <input type="submit" class="btn btn-outline-warning" value="edit">
             </form>

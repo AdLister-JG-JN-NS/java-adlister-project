@@ -33,9 +33,8 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
-    public Long edit(Ad ad) {
+    public void edit(Ad ad) {
 
-        return null;
     }
 
     @Override
