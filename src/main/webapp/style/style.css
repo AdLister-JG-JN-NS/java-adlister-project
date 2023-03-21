@@ -1,6 +1,7 @@
 :root{
     --lt-yellow: #FFF2CC;
     --md-yellow: #FFD966;
+    --lt-peach: #f5b892;
     --peach: #F4B183;
     --md-peach: #DFA67B;
 
@@ -56,57 +57,86 @@
     border-bottom: 1px solid var(--dk-brown);
 }
 
-.zen-v-line{
-    position: absolute;
-    width: 46.4%;
-    height: 93.8%;
-    /*border-left: 1px solid #333;*/
-    /*border-right: 1px solid #333;*/
-    left: 7.6%;
-    top: 46%;
-    box-shadow: inset 91px 0px 31px -85px rgba(64,40,64,0.57);
-    z-index: 1;
-    /*box-shadow: 14px 0px 11px -7px rgba(64,40,64,0.57);*/
+input[type=text], input[type=password], input[type=number], #description{
+    background-color: rgba(255, 255, 255, 0.46);
 }
 
 
 /********************** INDEX ***********************/
 
-
-.zen-i-tl {
+.zen-i-card{
     position: relative;
     margin: 0 4.1666666666%;
-    background-color: var(--peach);
-    border-radius: 25px 25px 25px 0;
+}
+.zen-i-card::before{
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -50px;
+    height: 50px;
+    width: 25px;
+}
+
+
+
+.zen-i-tl {
+    /*background-color: var(--peach);*/
+    border-radius: 25px 25px 0 0;
 }
 
 .zen-i-tl::before {
-    content: "";
-    position: absolute;
-    background-color: transparent;
-    bottom: -50px;
-    height: 50px;
-    width: 25px;
     border-top-left-radius: 25px;
-    box-shadow: 0 -25px 0 0 var(--peach);
+    box-shadow: 0 -25px 0 0;
 }
+
 .zen-i-tr {
-    position: relative;
-    margin: 0 4.1666666666%;
-    background-color: var(--peach);
-    border-radius: 25px 25px 0 25px;
+    /*background-color: var(--lt-peach);*/
+    border-radius: 25px 25px 0 0;
 }
-
 .zen-i-tr::before {
-    content: "";
-    position: absolute;
-    background-color: transparent;
-    bottom: -50px;
     right: 0;
-    height: 50px;
-    width: 25px;
     border-top-right-radius: 25px;
-    box-shadow: 0 -25px 0 0 var(--peach);
+    box-shadow: 0 -25px 0 0;
 }
 
+
+
+.zen-i-l {
+    /*background-color: var(--lt-peach);*/
+    border-radius: 25px 0 0 0;
+}
+
+.zen-i-l::before {
+    border-top-left-radius: 25px;
+    box-shadow: 0 -25px 0 0;
+}
+.zen-i-r {
+    /*background-color: var(--peach);*/
+    border-radius: 0 25px 0 0;
+}
+.zen-i-r::before {
+    right: 0;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -25px 0 0;
+}
+
+.peach{
+    background-color: var(--peach);
+    color: var(--peach);
+}
+/*.peach::before{*/
+/*    color: var(--peach);*/
+/*}*/
+
+.lt-peach{
+    background-color: var(--lt-peach);
+    color: var(--lt-peach);
+}
+/*.lt-peach::before{*/
+/*    color: var(--lt-peach);*/
+/*}*/
+.md-peach{
+    background-color: var(--md-peach);
+    color: var(--md-peach);
+}
 

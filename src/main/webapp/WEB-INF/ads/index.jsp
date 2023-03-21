@@ -19,7 +19,7 @@
     </div>
     <div class="row"><c:set var="counter" value="${0}"/>
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-5 p-0  ${utils.getClassforIndex(counter)}">
+        <div class="col-md-5 p-0 zen-i-card ${utils.getClassforIndex(counter)} ${utils.colorAlternator()} ">
             <div class="m-3">
             <form action="/ads/details">
                 <h2 class="fw-lighter">${ad.title}</h2>
