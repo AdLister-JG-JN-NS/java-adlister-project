@@ -12,7 +12,6 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="${ad.title}" />
     </jsp:include>
-
 </head>
 <body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
