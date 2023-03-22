@@ -35,7 +35,9 @@
                 <label for="salary">Salary</label>
                 <input id="salary" name="salary" class="form-control" type="number"/>
             </div>
-            <input type="submit" class="btn btn-block btn-primary">
+            <div class="d-flex justify-content-end pt-3">
+                <input type="submit" class="btn btn-block zen-btn-outline-primary">
+            </div>
         </form>
     </div>
 </body>

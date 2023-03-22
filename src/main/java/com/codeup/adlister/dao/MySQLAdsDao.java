@@ -36,6 +36,61 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> search(String str) {
+        PreparedStatement stmt = null;
+        try {
+            List<Ad> output = searchTitle(str);
+            syncLists(output, searchCompany(str));
+            syncLists(output, searchJobType(str));
+            syncLists(output, searchLocation(str));
+            syncLists(output, searchDescription(str));
+            return output;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+
+    }
+    private void syncLists(List<Ad> mainList, List<Ad> comparisonList){
+        for(Ad ad : comparisonList){
+            if(!mainList.contains(ad)){
+                mainList.add(ad);
+            }
+        }
+    }
+
+    private List<Ad> searchTitle(String str) throws SQLException {
+        String query = "SELECT * FROM ads where title like ?";
+        PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        stmt.setString(1, "%" + str + "%");
+        return createAdsFromResults(stmt.executeQuery());
+    }
+    private List<Ad> searchCompany(String str) throws SQLException {
+        String query = "SELECT * FROM ads where company like ?";
+        PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        stmt.setString(1, "%" + str + "%");
+        return createAdsFromResults(stmt.executeQuery());
+    }
+    private List<Ad> searchJobType(String str) throws SQLException {
+        String query = "SELECT * FROM ads where job_type like ?";
+        PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        stmt.setString(1, "%" + str + "%");
+        return createAdsFromResults(stmt.executeQuery());
+    }
+    private List<Ad> searchLocation(String str) throws SQLException {
+        String query = "SELECT * FROM ads where location like ?";
+        PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        stmt.setString(1, "%" + str + "%");
+        return createAdsFromResults(stmt.executeQuery());
+    }
+    private List<Ad> searchDescription(String str) throws SQLException {
+        String query = "SELECT * FROM ads where description like ?";
+        PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        stmt.setString(1, "%" + str + "%");
+        return createAdsFromResults(stmt.executeQuery());
+    }
+
+
+    @Override
     public Long insert(Ad ad) {
         try {
             String insertQuery = "INSERT INTO ads(user_id, title, description, company, job_type, location, salary) VALUES (?,?,?,?,?,?,?)";

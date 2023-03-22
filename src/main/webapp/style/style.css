@@ -7,6 +7,24 @@
     --dk-brown: #523c2d;
 }
 
+#searchbar{
+    background-color: transparent;
+    color: var(--dk-brown);
+    border-color: var(--dk-brown);
+    border-radius: 20px;
+    padding: 0 0.5em 0 0.5em;
+
+}
+.zen-search-icon{
+    position: absolute;
+    right: 4%;
+    top: 16%;
+
+}
+#search-form{
+    position: relative;
+}
+
 .bg-pattern{
     background-image: url("../img/yellowbg.png");
     background-repeat: repeat;
