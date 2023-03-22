@@ -15,7 +15,7 @@
 <body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
-  <h1 class="zen-text-retro">Please Enter Changes</h1>
+  <h1 class="zen-text-retro">Please enter changes</h1>
 <form action="/edit" method="post">
   <div class="form-group">
     <label for="title">Title</label>

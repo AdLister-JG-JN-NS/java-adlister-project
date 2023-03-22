@@ -14,6 +14,8 @@
 </head>
 <body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<div class="container">
+    <h1 class="zen-text-retro">Please enter changes</h1>
 <form action="/user/edit" method="post">
     <div class="form-group">
         <label for="username">Username</label>
@@ -31,8 +33,11 @@
         <label for="confirmPassword">Confirm New Password</label>
         <input id="confirmPassword" name="confirmPassword" class="form-control" type="password"/>
     </div>
-    <input type="hidden" id="userId" name="userId" value="${sessionScope.user.id}">
-    <input type="submit" class="btn btn-block btn-primary" value="Edit">
+    <div class="d-flex justify-content-end pt-3">
+        <input type="hidden" id="userId" name="userId" value="${sessionScope.user.id}">
+        <input type="submit" class="btn btn-block zen-btn-outline-primary" value="Submit">
+    </div>
 </form>
+</div>
 </body>
 </html>

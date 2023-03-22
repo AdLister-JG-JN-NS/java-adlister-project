@@ -4,7 +4,6 @@
     --lt-peach: #f5b892;
     --peach: #F4B183;
     --md-peach: #DFA67B;
-
     --dk-brown: #523c2d;
 }
 
@@ -16,17 +15,6 @@
     color: var(--dk-brown);
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .wave {
     position: relative;
 }
@@ -34,7 +22,6 @@
 .wave span {
     position: relative;
     display: inline-block;
-    color: #fff;
     font-size: 2em;
     text-transform: uppercase;
     animation: animate 2s ease-in-out infinite;
@@ -44,31 +31,18 @@
     0% {
         transform: translateY(0px);
     }
-
     25% {
         transform: translateY(-10px);
     }
-
-
     75% {
         transform: translateY(10px);
     }
-
     100% {
         transform: translateY(0px);
     }
 }
 
-
-
-
-
-
-
-
-
 .zen-text-retro{
-    /*color: #d2 bc7d;*/
     text-shadow: -2px 2px 0px #9d8f60, -4px 4px 0px #d9c559, -6px 6px 0px #e89a65;
 }
 .zen-card-container{
