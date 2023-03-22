@@ -12,7 +12,7 @@
         <jsp:param name="title" value="Edit User"/>
     </jsp:include>
 </head>
-<body>
+<body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <form action="/user/edit" method="post">
     <div class="form-group">
@@ -21,12 +21,17 @@
     </div>
     <div class="form-group">
         <label for="email">Email</label>
-        <textarea id="email" name="email" class="form-control" type="text">${sessionScope.user.email}</textarea>
+        <input id="email" name="email" class="form-control" type="text" value="${sessionScope.user.email}">
     </div>
     <div class="form-group">
-        <label for="password">Password</label>
-        <input id="password" name="password" class="form-control" type="text" value="${sessionScope.user.password}"/>
+        <label for="password">New Password</label>
+        <input id="password" name="password" class="form-control" type="password"/>
     </div>
+    <div class="form-group">
+        <label for="confirmPassword">Confirm New Password</label>
+        <input id="confirmPassword" name="confirmPassword" class="form-control" type="password"/>
+    </div>
+    <input type="hidden" id="userId" name="userId" value="${sessionScope.user.id}">
     <input type="submit" class="btn btn-block btn-primary" value="Edit">
 </form>
 </body>
