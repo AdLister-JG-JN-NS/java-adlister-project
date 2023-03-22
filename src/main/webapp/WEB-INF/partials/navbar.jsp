@@ -11,7 +11,7 @@
             <a class="navbar-brand" href="/ads">Job Postings</a>
         </div>
         <div>
-            <nav id="mainNav" class="navbar navbar-expand-lg ">
+            <nav id="mainNav" class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav mr-auto">
