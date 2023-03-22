@@ -1,5 +1,5 @@
 USE adlister_project_db;
-
+# --Create a table to hold ads
 truncate ads;
 
 INSERT INTO ads (user_id, title, description, company, salary, job_type, location)

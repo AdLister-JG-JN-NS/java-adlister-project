@@ -9,6 +9,8 @@
 <body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
+<!-- User Profile -->
+
 <div class="container-fluid text-center bg-transparent">
 
     <h1>Welcome Back, ${sessionScope.user.username}!</h1>

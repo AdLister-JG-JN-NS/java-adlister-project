@@ -8,7 +8,7 @@ import java.sql.*;
 
 public class MySQLUsersDao implements Users {
     private Connection connection;
-
+// connects to the database
     public MySQLUsersDao(Config config) {
         try {
             DriverManager.registerDriver(new Driver());
@@ -34,7 +34,7 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error finding a user by username", e);
         }
     }
-
+// places the user in the database
     @Override
     public Long insert(User user) {
         String query = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
@@ -51,7 +51,7 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error creating new user", e);
         }
     }
-
+// deletes the user from the database
     public void delete(User user){
         try {
             String deleteQuery = "DELETE FROM users WHERE id = ?";
@@ -62,7 +62,7 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error deleting user.", e);
         }
     }
-
+// updates the user in the database
     public void edit(User user){
         try{
             PreparedStatement stmt;
@@ -95,7 +95,7 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error updating user.", e);
         }
     }
-
+//extracts the user from the database
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;

@@ -4,17 +4,17 @@ import com.codeup.adlister.models.Ad;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// class for ads
 public class ListAdsDao implements Ads {
     private List<Ad> ads;
-
+// get a list of all the ads
     public List<Ad> all() {
         if (ads == null) {
             ads = generateAds();
         }
         return ads;
     }
-
+// insert a new ad and return the new ad's id
     public Long insert(Ad ad) {
         // make sure we have ads
         if (ads == null) {
@@ -26,22 +26,22 @@ public class ListAdsDao implements Ads {
         ads.add(ad);
         return ad.getId();
     }
-
+// delete an ad
     @Override
     public void delete(Ad ad) {
 
     }
-
+// edit an ad
     @Override
     public void edit(Ad ad) {
 
     }
-
+// find an ad by id
     @Override
     public Ad findById(long id) {
         return null;
     }
-
+// generates ads
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
         ads.add(new Ad(
