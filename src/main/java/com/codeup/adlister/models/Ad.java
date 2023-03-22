@@ -1,5 +1,5 @@
 package com.codeup.adlister.models;
-
+//ad class
 public class Ad {
     private long id;
     private long userId;
@@ -102,7 +102,7 @@ public class Ad {
         this.location = location;
     }
 
-    public double getSalary() {
+    public long getSalary() {
         return salary;
     }
 

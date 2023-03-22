@@ -10,8 +10,8 @@
 <body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
+<%--Job Listings Page--%>
 <div class="container">
-    <%--    <div class="zen-v-line"></div>--%>
     <div class="d-flex justify-content-center align-items-center mb-2">
         <div class="zen-hr"></div>
         <div class="fw-lighter fs-3 zen-box-h px-2">DEV JOBS</div>

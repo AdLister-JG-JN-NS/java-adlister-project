@@ -46,7 +46,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setString(4, ad.getCompany());
             stmt.setString(5, ad.getJob_type());
             stmt.setString(6, ad.getLocation());
-            stmt.setDouble(7, ad.getSalary());
+            stmt.setLong(7, ad.getSalary());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -120,7 +120,6 @@ public class MySQLAdsDao implements Ads {
         List<Ad> ads = new ArrayList<>();
         while (rs.next()) {
             ads.add(extractAd(rs));
-            System.out.println(extractAd(rs).getSalary());
         }
         return ads;
     }
