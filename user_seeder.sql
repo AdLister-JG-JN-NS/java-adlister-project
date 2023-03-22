@@ -1,5 +1,5 @@
 USE adlister_project_db;
-
+#Seeder for users table
 INSERT INTO users (username, email, password)
 
 VALUES ('gitGud', 'Sickwithit@gmail.com', 'GetRektKid!$'),

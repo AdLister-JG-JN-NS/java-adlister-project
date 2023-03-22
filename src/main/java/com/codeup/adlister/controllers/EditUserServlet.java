@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+// Servlet to edit a user
 @WebServlet("/user/edit")
 public class EditUserServlet extends HttpServlet {
     @Override

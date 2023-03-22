@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+// Servlet to display the count of how many times the page has been visited
 @WebServlet(name = "controllers.CounterServlet", urlPatterns = "/count")
 public class CounterServlet extends HttpServlet {
     private int counter = 0;
