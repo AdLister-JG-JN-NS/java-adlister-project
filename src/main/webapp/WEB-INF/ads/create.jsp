@@ -19,25 +19,27 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" class="form-control" type="text"></textarea>
         </div>
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input id="company" name="company" class="form-control" type="text"/>
+            </div>
+            <div class="form-group">
+                <label for="job_type">Job Type</label>
+                <input id="job_type" name="job_type" class="form-control" type="text"/>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input id="location" name="location" class="form-control" type="text"/>
+            </div>
+            <div class="form-group">
+                <label for="salary">Salary</label>
+                <input id="salary" name="salary" class="form-control" type="number"/>
+            </div>
+            <div class="d-flex justify-content-end pt-3">
+                <input type="submit" class="btn btn-block zen-btn-outline-primary">
+            </div>
+        </form>
+    </div>
 
-        <div class="form-group">
-            <label for="company">Company</label>
-            <input id="company" name="company" class="form-control" type="text"/>
-        </div>
-        <div class="form-group">
-            <label for="job_type">Job Type</label>
-            <input id="job_type" name="job_type" class="form-control" type="text"/>
-        </div>
-        <div class="form-group">
-            <label for="location">Location</label>
-            <input id="location" name="location" class="form-control" type="text"/>
-        </div>
-        <div class="form-group">
-            <label for="salary">Salary</label>
-            <input id="salary" name="salary" class="form-control" type="number"/>
-        </div>
-        <input type="submit" class="btn btn-block btn-primary">
-    </form>
-</div>
 </body>
 </html>

@@ -36,6 +36,35 @@ public class MySQLAdsDao implements Ads {
     }
 // insert a new ad and return the new ad's id
     @Override
+    public List<Ad> search(String str) {
+        PreparedStatement stmt = null;
+        try {
+            List<Ad> output = searchQuery(str, "title");
+            syncLists(output, searchQuery(str, "company"));
+            syncLists(output, searchQuery(str, "job_type"));
+            syncLists(output, searchQuery(str, "location"));
+            syncLists(output, searchQuery(str, "description"));
+            return output;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+
+    }
+    private void syncLists(List<Ad> mainList, List<Ad> comparisonList){
+        for(Ad ad : comparisonList){
+            if(!mainList.contains(ad)){
+                mainList.add(ad);
+            }
+        }
+    }
+
+    private List<Ad> searchQuery(String str, String column) throws SQLException {
+        String query = String.format("SELECT * FROM ads where %s like ?", column);
+        PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+        stmt.setString(1, "%" + str + "%");
+        return createAdsFromResults(stmt.executeQuery());
+    }
+    @Override
     public Long insert(Ad ad) {
         try {
             String insertQuery = "INSERT INTO ads(user_id, title, description, company, job_type, location, salary) VALUES (?,?,?,?,?,?,?)";
