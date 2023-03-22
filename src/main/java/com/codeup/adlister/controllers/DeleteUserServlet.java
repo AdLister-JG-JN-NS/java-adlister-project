@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+import javax.swing.JOptionPane;
 // servlet to delete a user
 @WebServlet("/user/delete")
 public class DeleteUserServlet extends HttpServlet {
@@ -28,6 +29,7 @@ public class DeleteUserServlet extends HttpServlet {
             }
             DaoFactory.getUsersDao().delete(user);
             System.out.printf("deleted %s%n", username);
+            JOptionPane.showMessageDialog(null, "User deleted");
         }else{
             System.out.print("could not delete user");
         }
