@@ -102,7 +102,7 @@ public class Ad {
         this.location = location;
     }
 
-    public double getSalary() {
+    public long getSalary() {
         return salary;
     }
 
