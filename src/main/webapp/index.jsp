@@ -9,7 +9,7 @@
 <body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-<!-- Job Listings Page-->
+<!-- Welcome Page-->
 
 <div class="container">
     <div class="d-flex justify-content-center">
