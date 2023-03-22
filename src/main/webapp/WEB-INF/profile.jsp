@@ -18,12 +18,14 @@
         <p class="card-text ">User: ${sessionScope.user.username}</p>
         <p class="card-text">Email: ${sessionScope.user.email}</p>
 
+        <form method="post" action="/user/delete">
+            <input type="hidden" id="delete" name="deleteUsername" value="${sessionScope.user.username}">
+            <input type="submit" class="btn btn-outline-danger" value="Delete Account">
+        </form>
 
-        <button type="submit" class="btn btn-primary" name="deleteAccount" value="${user.id}">Delete Account
-        </button>
-        <button type="submit" class="btn btn-primary" name="UpdateAccount" value="${user.id}">Update Account
-        </button>
-
+        <form action="/user/edit">
+            <input type="hidden" id="edit" name="username" value="${sessionScope.user.username}">
+            <input type="submit" class="btn btn-outline-danger" value="Edit Account">
         </form>
 
         <h2>Here are your current job postings:</h2>
