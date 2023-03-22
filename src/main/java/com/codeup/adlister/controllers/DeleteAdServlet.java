@@ -6,7 +6,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-
+// Servlet to delete an ad
 @WebServlet(name = "DeleteAdServlet", value = "/delete")
 public class DeleteAdServlet extends HttpServlet {
     @Override

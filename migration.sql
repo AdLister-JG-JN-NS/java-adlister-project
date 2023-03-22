@@ -1,9 +1,9 @@
 DROP DATABASE IF EXISTS adlister_project_db;
-
+# Create adlister_project_database
 CREATE DATABASE adlister_project_db;
 
 USE adlister_project_db;
-
+# Create a table for users
 CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     username VARCHAR(240) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
-
+# Create a table for ads
 CREATE TABLE ads (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL,

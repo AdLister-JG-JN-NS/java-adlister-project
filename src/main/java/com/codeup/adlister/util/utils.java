@@ -1,9 +1,10 @@
 package com.codeup.adlister.util;
 
 import java.util.ArrayList;
-
+// class for utils
 public class utils {
     private int flipper = 1;
+    // Get the class for the index of the card
     public String getClassforIndex(int pos, int total){
         if(pos == 0){
             if (total > 2) {
@@ -26,7 +27,7 @@ public class utils {
         }
         return "";
     }
-
+    // Alternate colors for alternating cards
     public String colorAlternator(){
 
 
