@@ -23,7 +23,7 @@
                 <c:forEach var="ad" items="${ads}">
 
                     <div class="col-md-5 p-0 zen-i-card ${utils.getClassforIndex(counter, ads.size())} ${utils.colorAlternator()} ">
-                        <div class="m-3">
+                        <div class="m-3 zen-i-card-body">
                             <form action="/ads/details">
                                 <h2 class="fw-lighter">${ad.title}</h2>
                                 <hr>

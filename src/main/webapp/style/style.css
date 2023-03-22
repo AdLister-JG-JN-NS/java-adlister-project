@@ -15,7 +15,6 @@
     background-repeat: repeat;
 }
 
-
 /******************* searchbar ******************/
 #search-form{
     position: relative;
@@ -128,11 +127,25 @@ input[type=text], input[type=password], input[type=number], #description{
     position: relative;
     margin: 0 4.1666666666%;
 }
+
+.zen-i-card-body{
+    position: relative;
+    z-index: 5;
+}
 .zen-i-card::before{
     content: "";
     position: absolute;
     background-color: transparent;
     bottom: -50px;
+    height: 50px;
+    width: 25px;
+}
+.zen-i-card::after{
+    z-index: 1;
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: -50px;
     height: 50px;
     width: 25px;
 }
@@ -142,11 +155,11 @@ input[type=text], input[type=password], input[type=number], #description{
 .zen-i-tl {
     border-radius: 25px 25px 0 0;
 }
-
 .zen-i-tl::before {
     border-top-left-radius: 25px;
     box-shadow: 0 -25px 0 0;
 }
+
 
 .zen-i-tr {
     border-radius: 25px 25px 0 0;
@@ -165,6 +178,11 @@ input[type=text], input[type=password], input[type=number], #description{
     border-top-left-radius: 25px;
     box-shadow: 0 -25px 0 0;
 }
+.zen-i-l::after {
+    right: 0;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 25px 0 0;
+}
 .zen-i-r {
     border-radius: 0 25px 0 0;
 }
@@ -172,6 +190,11 @@ input[type=text], input[type=password], input[type=number], #description{
     right: 0;
     border-top-right-radius: 25px;
     box-shadow: 0 -25px 0 0;
+}
+.zen-i-r::after {
+    left: 0;
+    border-bottom-left-radius: 25px;
+    box-shadow: 0 25px 0 0;
 }
 
 .zen-i-sl {
@@ -197,6 +220,11 @@ input[type=text], input[type=password], input[type=number], #description{
     border-top-left-radius: 25px;
     box-shadow: 0 -25px 0 0;
 }
+.zen-i-bl::after {
+    right: 0;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 25px 0 0;
+}
 .zen-i-br {
     border-radius: 0 25px 0 25px;
 }
@@ -205,6 +233,11 @@ input[type=text], input[type=password], input[type=number], #description{
     border-top-right-radius: 25px;
     box-shadow: 0 -25px 0 0;
 }
+.zen-i-br::after{
+    border-bottom-left-radius: 25px;
+    box-shadow: 0 25px 0 0;
+}
+
 /******************* color setters (dynamically set) ******************/
 .peach{
     background-color: var(--peach);
