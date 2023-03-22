@@ -8,7 +8,7 @@ public class Ad {
     private String company;
     private String job_type;
     private String location;
-    private double salary;
+    private long salary;
 
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
@@ -17,7 +17,7 @@ public class Ad {
         this.description = description;
     }
 
-    public Ad(long id, long userId, String title, String description, String company, String job_type, String location, double salary) {
+    public Ad(long id, long userId, String title, String description, String company, String job_type, String location, long salary) {
         this.id = id;
         this.userId = userId;
         this.title = title;
@@ -28,7 +28,7 @@ public class Ad {
         this.salary = salary;
     }
 
-    public Ad(long userId, String title, String description, String company, String job_type, String location, double salary) {
+    public Ad(long userId, String title, String description, String company, String job_type, String location, long salary) {
         this.userId = userId;
         this.title = title;
         this.description = description;
@@ -106,7 +106,7 @@ public class Ad {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(long salary) {
         this.salary = salary;
     }
 }

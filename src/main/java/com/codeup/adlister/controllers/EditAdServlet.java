@@ -27,7 +27,7 @@ public class EditAdServlet extends HttpServlet {
         String title = req.getParameter("title");
         String description = req.getParameter("description");
         String company = req.getParameter("company");
-        double salary = Double.parseDouble(req.getParameter("salary"));
+        long salary = Long.parseLong(req.getParameter("salary"));
         String jobType = req.getParameter("job_type");
         String location = req.getParameter("location");
 

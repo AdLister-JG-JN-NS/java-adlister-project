@@ -14,7 +14,7 @@
     <h1>Welcome Back, ${sessionScope.user.username}!</h1>
 
     <div class="card bg-transparent">
-        <h1 class="card-title">Account Details:</h1>
+        <h2 class="card-title">Account Details:</h2>
         <p class="card-text ">User: ${sessionScope.user.username}</p>
         <p class="card-text">Email: ${sessionScope.user.email}</p>
 
