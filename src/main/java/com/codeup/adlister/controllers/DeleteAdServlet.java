@@ -15,7 +15,7 @@ public class DeleteAdServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String adId = request.getParameter("delete");
         if(adId != null){
             DaoFactory.getAdsDao().delete(DaoFactory.getAdsDao().findById(Long.parseLong(adId)));
