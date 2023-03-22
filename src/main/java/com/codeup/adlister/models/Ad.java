@@ -1,5 +1,5 @@
 package com.codeup.adlister.models;
-
+//ad class
 public class Ad {
     private long id;
     private long userId;
@@ -9,7 +9,7 @@ public class Ad {
     private String job_type;
     private String location;
     private long salary;
-
+// constructors  for ads
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
         this.userId = userId;
@@ -45,7 +45,7 @@ public class Ad {
     }
 
 
-
+// getters and setters for ad
     public long getId() {
         return id;
     }
@@ -102,7 +102,7 @@ public class Ad {
         this.location = location;
     }
 
-    public double getSalary() {
+    public long getSalary() {
         return salary;
     }
 

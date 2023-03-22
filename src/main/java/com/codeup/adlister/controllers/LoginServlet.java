@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+// servlet to login a user
 @WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,7 +35,13 @@ public class LoginServlet extends HttpServlet {
 
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
-            response.sendRedirect("/profile");
+            String path = (String) request.getSession().getAttribute("path");
+            if (path == null){
+                response.sendRedirect("/profile");
+            }else {
+                request.getSession().removeAttribute("path");
+                response.sendRedirect(path);
+            }
         } else {
             response.sendRedirect("/login");
         }

@@ -1,5 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<!-- Navbar -->
+
 <nav class="navbar navbar-expand-lg sticky-top">
 
     <div class="container-fluid">
@@ -38,7 +40,8 @@
                                href="${pageContext.request.contextPath}/logout">Logout</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="${pageContext.request.contextPath}/ads/create">Create Job Listings</a>
+                            <a class="nav-link"
+                               href="${pageContext.request.contextPath}/ads/create">Create Job Listings</a>
                         </li>
                     </c:when>
                     <c:otherwise>
@@ -56,7 +59,7 @@
         </span>
                     </div>
                 </div>
-        </div> <!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-
+        </div>
+    </div>
 </nav>
+

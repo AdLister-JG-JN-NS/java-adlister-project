@@ -6,10 +6,10 @@ import com.mysql.cj.jdbc.Driver;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+// class for ads
 public class MySQLAdsDao implements Ads {
     private Connection connection = null;
-
+// get a list of all the ads
     public MySQLAdsDao(Config config) {
         try {
             DriverManager.registerDriver(new Driver());
@@ -22,7 +22,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error connecting to the database!", e);
         }
     }
-
+// insert a new ad and return the new ad's id
     @Override
     public List<Ad> all() {
         PreparedStatement stmt = null;
@@ -34,7 +34,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
-
+// insert a new ad and return the new ad's id
     @Override
     public List<Ad> search(String str) {
         PreparedStatement stmt = null;
@@ -101,7 +101,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setString(4, ad.getCompany());
             stmt.setString(5, ad.getJob_type());
             stmt.setString(6, ad.getLocation());
-            stmt.setDouble(7, ad.getSalary());
+            stmt.setLong(7, ad.getSalary());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -110,7 +110,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
-
+// delete an ad
     @Override
     public void delete(Ad ad) {
         try {
@@ -122,7 +122,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error deleting ad.", e);
         }
     }
-
+// edit an ad
     @Override
     public void edit(Ad ad) {
         try{
@@ -147,7 +147,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error updating ad.", e);
         }
     }
-
+// find an ad by id
     public Ad findById(long id) {
         List<Ad> ads = DaoFactory.getAdsDao().all();
         for (Ad ad : ads){
@@ -157,7 +157,7 @@ public class MySQLAdsDao implements Ads {
         }
         return null;
     }
-
+// find ads by user id
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
@@ -170,12 +170,11 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("salary")
         );
     }
-
+// create ads from results
     private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> ads = new ArrayList<>();
         while (rs.next()) {
             ads.add(extractAd(rs));
-            System.out.println(extractAd(rs).getSalary());
         }
         return ads;
     }
