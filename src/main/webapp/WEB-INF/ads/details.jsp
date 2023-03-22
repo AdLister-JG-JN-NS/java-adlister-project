@@ -19,7 +19,7 @@
     <div class="zen-card p-3">
       <section class="d-flex justify-content-between">
           <span class="fs-1">${ad.title}</span>
-          <span class="fs-1 fst-italic fw-lighter text-success">$${String.format("%.0f", ad.salary / 1000)}K</span>
+          <span class="fs-1 fst-italic fw-lighter zen-text-peach">$${String.format("%.0f", ad.salary / 1000)}K</span>
       </section>
       <hr>
       <span class="text-muted">☞  ${ad.job_type}  ◌  ${ad.company}  ◌  ${ad.location}</span>
@@ -28,9 +28,9 @@
         <section class="mb-3">${ad.description}</section>
         <c:if test="${sessionScope.user.id == ad.getUserId()}">
             <div class="d-flex justify-content-end">
-            <form action="/edit" >
+            <form action="/edit" class="me-2">
                 <input type="hidden" id="edit" name="edit" value="${ad.id}">
-                <input type="submit" class="btn btn-outline-warning" value="edit">
+                <input type="submit" class="btn zen-btn-outline-primary" value="edit">
             </form>
             <form method="post" action="/delete">
                 <input type="hidden" id="delete" name="delete" value="${ad.id}">

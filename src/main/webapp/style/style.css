@@ -15,6 +15,62 @@
 *{
     color: var(--dk-brown);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.wave {
+    position: relative;
+}
+
+.wave span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(.1s*var(--i));
+}
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+
+    75% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+.zen-text-retro{
+    /*color: #d2 bc7d;*/
+    text-shadow: -2px 2px 0px #9d8f60, -4px 4px 0px #d9c559, -6px 6px 0px #e89a65;
+}
 .zen-card-container{
     display: flex;
     flex-direction: column;
@@ -22,11 +78,15 @@
     /*justify-content: center;*/
 }
 .zen-card{
-    background-color: #eee;
+    background-color: var(--peach);
     width: 85%;
     height: auto;
     box-shadow: 0px 0px 15px 0px rgba(156,156,156,.4);
-    /*border-radius: ;*/
+    border-radius: 25px;
+}
+
+.zen-text-peach{
+    color: var(--lt-yellow);
 }
 .zen-index-card{
     background-color: #eee;
@@ -119,6 +179,53 @@ input[type=text], input[type=password], input[type=number], #description{
     border-top-right-radius: 25px;
     box-shadow: 0 -25px 0 0;
 }
+
+
+.zen-i-sl {
+    /*background-color: var(--lt-peach);*/
+    border-radius: 25px 25px 25px 0;
+}
+.zen-i-sl::before {
+    border-top-left-radius: 25px;
+    box-shadow: 0 -25px 0 0;
+}
+.zen-i-sr {
+    /*background-color: var(--peach);*/
+    border-radius: 25px 25px 0 25px;
+}
+.zen-i-sr::before {
+    right: 0;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -25px 0 0;
+}
+
+.zen-i-bl {
+    /*background-color: var(--lt-peach);*/
+    border-radius: 25px 0 25px 0;
+}
+.zen-i-bl::before {
+    border-top-left-radius: 25px;
+    box-shadow: 0 -25px 0 0;
+}
+.zen-i-br {
+    /*background-color: var(--peach);*/
+    border-radius: 0 25px 0 25px;
+}
+.zen-i-br::before {
+    right: 0;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -25px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 .peach{
     background-color: var(--peach);
