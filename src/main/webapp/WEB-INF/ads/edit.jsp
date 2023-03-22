@@ -14,6 +14,8 @@
 </head>
 <body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<div class="container">
+  <h1 class="zen-text-retro">Please Enter Changes</h1>
 <form action="/edit" method="post">
   <div class="form-group">
     <label for="title">Title</label>
@@ -40,9 +42,12 @@
     <label for="salary">Salary</label>
     <input id="salary" name="salary" class="form-control" type="number" value="${ad.salary}"/>
   </div>
-  <input type="hidden" id="adId" name="adId" value="${ad.id}">
-  <input type="hidden" id="userId" name="userId" value="${ad.userId}">
-  <input type="submit" class="btn btn-block btn-primary" value="Edit">
+  <div class="d-flex justify-content-end pt-3">
+    <input type="hidden" id="adId" name="adId" value="${ad.id}">
+    <input type="hidden" id="userId" name="userId" value="${ad.userId}">
+    <input type="submit" class="btn btn-block zen-btn-outline-primary" value="Edit">
+  </div>
 </form>
+</div>
 </body>
 </html>

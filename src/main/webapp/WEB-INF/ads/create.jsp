@@ -8,7 +8,7 @@
 <body class="bg-pattern">
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Create a new Job Listing</h1>
+        <h1 class="zen-text-retro">Create a new Job Listing</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
                 <label for="title">Title</label>

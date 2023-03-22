@@ -9,9 +9,19 @@
 <body class="bg-pattern">
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1 class="text-center">Welcome to the Job Listings!</h1>
+        <div class="d-flex justify-content-center">
+        <div class="wave">
+            <span class="zen-text-retro fs-1" style="--i:1">W</span>
+            <span class="zen-text-retro fs-1" style="--i:2">E</span>
+            <span class="zen-text-retro fs-1" style="--i:3">L</span>
+            <span class="zen-text-retro fs-1" style="--i:4">C</span>
+            <span class="zen-text-retro fs-1" style="--i:5">O</span>
+            <span class="zen-text-retro fs-1" style="--i:6">M</span>
+            <span class="zen-text-retro fs-1" style="--i:7">E</span>
+        </div>
+        </div>
         
-        <div class="d-flex  justify-conent-center">
+        <div class="d-flex  justify-content-center">
             <img src="img/chair.png">
         </div>
     </div>
