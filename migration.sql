@@ -18,7 +18,7 @@ CREATE TABLE ads (
     title VARCHAR(240) NOT NULL,
     description TEXT NOT NULL,
     company VARCHAR(50),
-    salary double,
+    salary long,
     job_type varchar(50),
     location varchar(100),
     PRIMARY KEY (id),

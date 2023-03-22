@@ -3,7 +3,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Welcome to my site!" />
+        <jsp:param name="title" value="Welcome to Job Listings!" />
     </jsp:include>
 </head>
 <body class="bg-pattern">
@@ -11,7 +11,7 @@
     <div class="container">
         <h1 class="text-center">Welcome to the Job Listings!</h1>
         
-        <div class="d-flex  justify-conent-center">
+        <div class="d-flex  justify-content-center">
             <img src="img/chair.png">
         </div>
     </div>
