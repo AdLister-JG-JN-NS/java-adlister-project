@@ -29,7 +29,7 @@ public class DeleteUserServlet extends HttpServlet {
             }
             DaoFactory.getUsersDao().delete(user);
             System.out.printf("deleted %s%n", username);
-            JOptionPane.showMessageDialog(null, "User deleted");
+            JOptionPane.showMessageDialog(null, "User deleted, Click OK to continue");
         }else{
             System.out.print("could not delete user");
         }
